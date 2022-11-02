@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500" style="border: solid"></canvas>
+<script>
+    class Circle{
+        constructor(x,y,radius,color) {
+            this.x=x;
+            this.y=y;
+            this.radius=radius;
+            this.color=color;
+        }
+        getRender(){
+            let ctx =document.getElementById('myCanvas').getContext('2d');
+            ctx.fillStyle=this.color;
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+    }
+    let hinhTron= new Circle(100,100,50,'red')
+    hinhTron.getRender()
+</script>
+
+</body>
+</html>
